@@ -46,3 +46,22 @@ a{
     justify-content: center;
     flex-wrap: wrap;
 }
+/* BEERS */
+.card_beers{
+    margin: 5% 0.5% 5% 0.5%;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+#beers_title{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#beers_tagline{
+    margin-bottom: 1%;
+}
+
+#beers_description{
+    font-size: medium;
+}

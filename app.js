@@ -25,7 +25,11 @@ app.get('/beers', (req, res) => {
   const punkAPI = new PunkAPIWrapper()
   punkAPI
   .getBeers()
-  .then(beersFromApi => res.status(200).json(beersFromApi))
+  .then(beersFromApi => {
+    const dataBeers = beersFromApi
+    res.status(200).render('beers',{dataBeers})
+    // res.status(200).json(beersFromApi)
+  })
   .catch(error => console.log(error));
 })
 
