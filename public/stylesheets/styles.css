@@ -53,6 +53,18 @@ a{
     flex-wrap: wrap;
 }
 
+.sub_div_beers{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin: 2% 1.5% 2% 1.5%;
+}
+
+.card_beers{
+    margin: 1%;
+}
+
+
 #beers_title,#R_beer_title,#beers_tagline,#R_beer_tagline,#beers_description,#R_beer_description,#R_beer_FP,#R_beer_Btips{
     margin-bottom: 2%;
 }
@@ -76,17 +88,6 @@ a{
 
 #beers_tagline,#R_beer_tagline,#beers_description,#R_beer_description{
     font-size: medium;
-}
-
-.sub_div_beers{
-    display: flex;
-    align-items: center;
-    width: 30%;
-    margin: 2% 1.5% 2% 1.5%;
-}
-
-.card_beers{
-    margin: 1%;
 }
 
 .card_random_beer{

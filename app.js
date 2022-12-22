@@ -31,6 +31,16 @@ app.get('/beers', (req, res) => {
   .catch(error => console.log(error));
 })
 
+app.get('/beers/:showId', async function (req, res, next) {
+  const { showId } = req.params;
+  try {
+    const beer = await dataBeers.findById(showId);
+    res.render('detail', beer);
+  } catch(error){
+   console.log(error)
+  }
+})
+
 app.get('/random-beer', (req, res) => {
   punkAPI
   .getRandom()
@@ -38,7 +48,9 @@ app.get('/random-beer', (req, res) => {
     const dataRandom_Beer = beersFromApi
     res.status(200).render('random-beer',{dataRandom_Beer})
   })
-  .catch(error => console.log(error));
+  .catch(error => console.log(error))
 })
+
+
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'))
