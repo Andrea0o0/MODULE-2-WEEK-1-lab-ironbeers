@@ -7,7 +7,6 @@ const punkAPI = new PunkAPIWrapper()
 
 const app = express()
 
-
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'views'))
 
@@ -32,14 +31,12 @@ app.get('/beers', (req, res) => {
   .catch(error => console.log(error));
 })
 
-
 app.get('/random-beer', (req, res) => {
   punkAPI
   .getRandom()
   .then(beersFromApi => {
     const dataRandom_Beer = beersFromApi
     res.status(200).render('random-beer',{dataRandom_Beer})
-    console.log(dataRandom_Beer)
   })
   .catch(error => console.log(error));
 })
