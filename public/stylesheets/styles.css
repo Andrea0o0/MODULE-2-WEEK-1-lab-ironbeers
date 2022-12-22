@@ -53,15 +53,37 @@ a{
     font-family: Helvetica;
 }
 
-#beers_title{
+#beers_title,#R_beer_title,#beers_tagline,#R_beer_tagline,#beers_description,#R_beer_description,#R_beer_FP,#R_beer_Btips{
+    margin-bottom: 2%;
+}
+
+#R_beer_Btips{
+    margin-top: 2%;
+}
+
+.R_beer_FP_li{
+    margin-bottom: 1%;
+}
+
+#beers_title,#R_beer_title{
     font-size: x-large;
     font-weight: bold;
 }
 
-#beers_tagline{
-    margin-bottom: 1%;
+#beers_tagline,#R_beer_tagline{
+    color:#bfbfbf;
 }
 
-#beers_description{
+#beers_tagline,#R_beer_tagline,#beers_description,#R_beer_description{
     font-size: medium;
+}
+
+/* RANDOM BEER */
+.card_random_beer{
+    display: flex;
+    align-items: center;
+    margin: 2% 8% 2% 8%;
+}
+#R_beer_image{
+    margin-right: 4%;
 }
